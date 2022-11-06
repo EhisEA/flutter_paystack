@@ -156,7 +156,12 @@ class _CheckoutWidgetState extends BaseState<CheckoutWidget>
                             ? _buildSuccessfulWidget()
                             : _methodWidgets[_currentIndex!].child,
                     SizedBox(height: 20),
-                    securedWidget
+                    Container(
+                      color: Colors.white,
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                      child: securedWidget,
+                    )
                   ],
                 )),
           ),
