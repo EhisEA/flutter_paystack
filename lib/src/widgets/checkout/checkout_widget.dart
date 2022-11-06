@@ -101,14 +101,17 @@ class _CheckoutWidgetState extends BaseState<CheckoutWidget>
             Icon(
               Icons.lock,
               size: 10,
-              color: Colors.black,
+              color: context.textTheme().bodySmall?.color,
             ),
             Padding(
               padding: EdgeInsetsDirectional.only(start: 3),
               child: Text(
                 "Secured by",
                 key: Key("SecuredBy"),
-                style: TextStyle(fontSize: 10, color: Colors.black),
+                style: TextStyle(
+                  fontSize: 10,
+                  color: context.textTheme().bodySmall?.color,
+                ),
               ),
             )
           ],
@@ -133,6 +136,7 @@ class _CheckoutWidgetState extends BaseState<CheckoutWidget>
               key: Key("PaystackLogo"),
               package: 'flutter_paystack',
               height: 15,
+              color: context.textTheme().bodySmall?.color,
             )
           ],
         )
@@ -160,12 +164,7 @@ class _CheckoutWidgetState extends BaseState<CheckoutWidget>
                             ? _buildSuccessfulWidget()
                             : _methodWidgets[_currentIndex!].child,
                     SizedBox(height: 20),
-                    Container(
-                      color: Colors.white,
-                      padding:
-                          EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-                      child: securedWidget,
-                    )
+                    securedWidget,
                   ],
                 )),
           ),
