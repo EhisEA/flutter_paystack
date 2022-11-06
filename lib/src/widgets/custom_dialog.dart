@@ -91,6 +91,7 @@ class CustomAlertDialog extends StatelessWidget {
       );
     } else {
       var body = new Material(
+        color: context.colorScheme().background.withOpacity(0.1),
         type: MaterialType.card,
         borderRadius: new BorderRadius.circular(10.0),
         child: new Column(
