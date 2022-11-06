@@ -51,7 +51,7 @@ class CustomAlertDialog extends StatelessWidget {
     return buildContent(context, children);
   }
 
-  Widget buildContent(context, List<Widget> children) {
+  Widget buildContent(BuildContext context, List<Widget> children) {
     Widget widget;
     if (fullscreen) {
       widget = new Material(
