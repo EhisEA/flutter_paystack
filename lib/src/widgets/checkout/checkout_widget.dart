@@ -98,13 +98,17 @@ class _CheckoutWidgetState extends BaseState<CheckoutWidget>
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Icon(Icons.lock, size: 10),
+            Icon(
+              Icons.lock,
+              size: 10,
+              color: Colors.black,
+            ),
             Padding(
               padding: EdgeInsetsDirectional.only(start: 3),
               child: Text(
                 "Secured by",
                 key: Key("SecuredBy"),
-                style: TextStyle(fontSize: 10),
+                style: TextStyle(fontSize: 10, color: Colors.black),
               ),
             )
           ],
