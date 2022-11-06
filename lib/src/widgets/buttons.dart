@@ -95,21 +95,19 @@ class _BaseButton extends StatelessWidget {
           borderRadius: borderRadius,
           color: color,
         ),
-        child: new Container(
+        child: Container(
           width: double.infinity,
           height: double.infinity,
-          child: new TextButton(
+          child: TextButton(
               onPressed: showProgress ? null : onPressed,
               child: showProgress
-                  ? new Container(
+                  ? Container(
                       width: 20.0,
                       height: 20.0,
-                      child: new Theme(
-                          data: Theme.of(context)
-                              .copyWith(accentColor: Colors.white),
-                          child: new CircularProgressIndicator(
-                            strokeWidth: 2.0,
-                          )),
+                      child: CircularProgressIndicator(
+                        strokeWidth: 2.0,
+                        color: Colors.white,
+                      ),
                     )
                   : iconData == null
                       ? child == null

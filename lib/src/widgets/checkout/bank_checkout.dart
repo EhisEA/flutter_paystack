@@ -118,7 +118,6 @@ class _BankCheckoutState extends BaseCheckoutMethodState<BankCheckout> {
             _currentBank == null
                 ? new Icon(
                     Icons.account_balance,
-                    color: Colors.black,
                     size: 35.0,
                   )
                 : container,
@@ -132,9 +131,9 @@ class _BankCheckoutState extends BaseCheckoutMethodState<BankCheckout> {
                   ? 'Choose your bank to start the payment'
                   : 'Enter your acccount number',
               style: const TextStyle(
-                  fontWeight: FontWeight.w500,
-                  fontSize: 14.0,
-                  color: Colors.black),
+                fontWeight: FontWeight.w500,
+                fontSize: 14.0,
+              ),
             ),
             new SizedBox(
               height: 20.0,
