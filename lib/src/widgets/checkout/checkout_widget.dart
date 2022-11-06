@@ -247,7 +247,7 @@ class _CheckoutWidgetState extends BaseState<CheckoutWidget>
       vsync: this,
       curve: Curves.fastOutSlowIn,
       child: new Container(
-        color: context.colorScheme().background.withOpacity(0.5),
+        color: context.colorScheme().background.withOpacity(0.1),
         height: _tabHeight,
         alignment: Alignment.center,
         child: new TabBar(

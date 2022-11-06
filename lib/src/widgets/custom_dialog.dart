@@ -55,7 +55,7 @@ class CustomAlertDialog extends StatelessWidget {
     Widget widget;
     if (fullscreen) {
       widget = new Material(
-        color: context.colorScheme().background.withOpacity(0.1),
+        color: context.colorScheme().background.withOpacity(0.5),
         child: new Container(
             child: onCancelPress == null
                 ? new Padding(
@@ -92,7 +92,7 @@ class CustomAlertDialog extends StatelessWidget {
       );
     } else {
       var body = new Material(
-        color: context.colorScheme().background.withOpacity(0.1),
+        color: context.colorScheme().background.withOpacity(0.5),
         type: MaterialType.card,
         borderRadius: new BorderRadius.circular(10.0),
         child: new Column(
