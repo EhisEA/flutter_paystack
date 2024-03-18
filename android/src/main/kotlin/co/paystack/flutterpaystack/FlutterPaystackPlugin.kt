@@ -21,8 +21,15 @@ class FlutterPaystackPlugin : FlutterPlugin, ActivityAware {
         pluginBinding = null
     }
 
-    private fun setupMethodHandler(messenger: BinaryMessenger?, activity: Activity) {
-        methodCallHandler = MethodCallHandlerImpl(messenger, activity)
+    // private fun setupMethodHandler(messenger: BinaryMessenger?, activity: Activity) {
+private fun setupMethodHandler(messenger: BinaryMessenger?, activity: Activity?) {
+    // Use the let function to handle the nullable activity
+    activity?.let { nonNullActivity ->
+        // Inside the let block, nonNullActivity is guaranteed to be non-null
+        // So we can safely create the MethodCallHandlerImpl object with it
+        methodCallHandler = MethodCallHandlerImpl(messenger, nonNullActivity)
+    }
+        // methodCallHandler = MethodCallHandlerImpl(messenger, activity)
     }
 
 
