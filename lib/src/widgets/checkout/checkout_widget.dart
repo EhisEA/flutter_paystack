@@ -174,7 +174,7 @@ class _CheckoutWidgetState extends BaseState<CheckoutWidget>
   }
 
   Widget _buildTitle() {
-    final accentColor = Theme.of(context).accentColor;
+    final accentColor = Theme.of(context).primaryColor;
     var emailAndAmount = Column(
       crossAxisAlignment: CrossAxisAlignment.end,
       children: <Widget>[
@@ -252,7 +252,7 @@ class _CheckoutWidgetState extends BaseState<CheckoutWidget>
   Widget buildCheckoutMethods(Color accentColor) {
     return AnimatedSize(
       duration: const Duration(milliseconds: 300),
-      vsync: this,
+      // vsync: this,
       curve: Curves.fastOutSlowIn,
       child: new Container(
         color: context.colorScheme().background.withOpacity(0.5),

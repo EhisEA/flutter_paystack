@@ -77,7 +77,7 @@ class _PinWidgetState extends BaseState<PinWidget> {
         children: List.generate(
             _startCount,
             (i) => star(i == (_startCount - 1)
-                ? Theme.of(context).accentColor
+                ? Theme.of(context).primaryColor
                 : Theme.of(context).primaryColorLight)),
       ),
     );
